@@ -1,0 +1,21 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Chat en tiempo real con websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"chat\"",
+    "\"chat",
+    "tiempo",
+    "real\"",
+    "\"realtime\""
+  ],
+  "author": "fermelli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
