@@ -1,0 +1,151 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #111b21;
+}
+
+.navbar {
+    background-color: #202c33;
+}
+
+.chat {
+    position: relative;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px);
+}
+
+.chat__fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/imagenes/fondo.png);
+    background-repeat: repeat;
+    background-color: #0a1014;
+    opacity: 0.06;
+    height: calc(100vh - 56px);
+}
+
+.chat__fila {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.chat__fila--izquierda {
+    justify-content: flex-start;
+}
+
+.chat__fila--derecha {
+    justify-content: flex-end;
+}
+
+.burbuja {
+    position: relative;
+    background-color: #1e3441;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .burbuja {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .burbuja {
+        max-width: 50%;
+    }
+}
+
+.chat__fila--izquierda .burbuja {
+    border-radius: 0 0.5rem 0.5rem 0;
+    border-left: 0.5rem solid #0a1014;
+}
+
+.chat__fila--derecha .burbuja {
+    border-radius: 0.5rem 0 0 0.5rem;
+    border-right: 0.5rem solid #0a1014;
+}
+
+.burbuja__usuario {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.burbuja__texto {
+    font-size: 0, 90625rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.chat__container-formulario {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #202c33;
+    padding: 1rem;
+}
+
+.chat__formulario {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.chat__formulario-textarea {
+    background-color: #2a3942;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    color: #fff;
+    min-height: 42px;
+    height: 90px;
+    max-height: 90px;
+    font-size: 1rem;
+    outline: none;
+    user-select: text;
+    white-space: pre-wrap;
+    word-break: break-word;
+    resize: none;
+}
+
+.chat__formulario-textarea::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.chat__formulario-textarea::-webkit-scrollbar-track {
+    background-color: #2a3942;
+}
+
+.chat__formulario-textarea::-webkit-scrollbar-thumb {
+    background-color: #4c5960;
+}
+
+.chat__formulario-boton {
+    background-color: #2a3942;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100px;
+    height: 42px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.chat__formulario-boton:hover {
+    background-color: #1e3441;
+}
