@@ -9,6 +9,7 @@ body {
 
 .navbar {
     background-color: #202c33;
+    outline: none;
 }
 
 .container-chat {
@@ -156,5 +157,83 @@ body {
 }
 
 .chat__formulario-boton:hover {
+    background-color: #1e3441;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    background-color: rgba(58, 58, 58, 0.70);
+    display: grid;
+    place-items: center;
+    z-index: 999;
+}
+
+.modal--oculto {
+    display: none;
+}
+
+.modal__container {
+    background-color: #202c33;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.modal__container-header-titulo {
+    margin: 0 0 1rem 0;
+    color: #fff;
+}
+
+.modal__container-body-formulario-input {
+    background-color: #2a3942;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.modal__container-body-formulario-input-color {
+    background-color: #2a3942;
+    display: block;
+    border: none;
+    border-radius: 0.5rem;
+    height: 42px;
+    width: 42px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.modal__container-body-formulario-input-color:focus {
+    border: 1px solid #fff;
+}
+
+.modal__container-body-formulario-boton {
+    background-color: #2a3942;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100px;
+    height: 42px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.modal__container-body-formulario-boton:hover {
     background-color: #1e3441;
 }
