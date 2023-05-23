@@ -20,7 +20,7 @@
     });
 
     textarea.addEventListener('keyup', (event) => {
-        if (event.keyCode === 13 && !event.shiftKey) {
+        if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
 
             formulario.dispatchEvent(new Event('submit'));
