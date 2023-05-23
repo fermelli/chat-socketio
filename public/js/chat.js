@@ -49,11 +49,12 @@
 
     socket.on('chat', ({ usuario, mensaje }) => {
         const colorBorde = usuario.color ? `border-color: ${usuario.color}` : '';
+        const esElUsuarioActual = usuarioActual.nombre === usuario.nombre;
 
         const burbuja = /*html*/ `
-            <div class="chat__fila ${usuario.nombre == usuarioActual.nombre ? 'chat__fila--izquierda' : 'chat__fila--derecha'}">
+            <div class="chat__fila ${esElUsuarioActual ? 'chat__fila--izquierda' : 'chat__fila--derecha'}">
                 <div class="burbuja" style="${colorBorde}">
-                    <span class="burbuja__usuario">${usuario.nombre}</span>
+                    <span class="burbuja__usuario">${esElUsuarioActual ? 'Yo' : `${usuario.nombre}`}</span>
                     <p class="burbuja__texto">
                         ${mensaje}
                     </p>
