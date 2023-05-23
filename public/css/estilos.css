@@ -11,12 +11,34 @@ body {
     background-color: #202c33;
 }
 
+.container-chat {
+    position: relative;
+    height: calc(100vh - 56px);
+}
+
 .chat {
     position: relative;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 56px);
+    height: calc(100vh - 178px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.chat::-webkit-scrollbar,
+.chat__formulario-textarea::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.chat::-webkit-scrollbar-track,
+.chat__formulario-textarea::-webkit-scrollbar-track {
+    background-color: #2a3942;
+}
+
+.chat::-webkit-scrollbar-thumb,
+.chat__formulario-textarea::-webkit-scrollbar-thumb {
+    background-color: #4c5960;
 }
 
 .chat__fondo {
@@ -29,7 +51,6 @@ body {
     background-repeat: repeat;
     background-color: #0a1014;
     opacity: 0.06;
-    height: calc(100vh - 56px);
 }
 
 .chat__fila {
@@ -120,18 +141,6 @@ body {
     white-space: pre-wrap;
     word-break: break-word;
     resize: none;
-}
-
-.chat__formulario-textarea::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-.chat__formulario-textarea::-webkit-scrollbar-track {
-    background-color: #2a3942;
-}
-
-.chat__formulario-textarea::-webkit-scrollbar-thumb {
-    background-color: #4c5960;
 }
 
 .chat__formulario-boton {
